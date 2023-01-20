@@ -1,4 +1,4 @@
-#actual connectivity as shown in Spring-App #
+# Actual connectivity as shown in Spring-App #
 ## Dependency Injection between the objects with simple and complex types ##
 ### You can have setter methods to supply the dependencies of simple or complex type ###
 
