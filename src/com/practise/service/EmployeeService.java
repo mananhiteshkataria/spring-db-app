@@ -1,5 +1,7 @@
 package com.practise.service;
 
+import java.util.List;
+
 import com.practise.beans.Employee;
 import com.practise.dao.EmployeeDao;
 
@@ -22,6 +24,12 @@ public class EmployeeService {
 	public Employee getEmployee (int id)
 	{
 		return dao.getEmployee(id);
+	}
+	
+	public List<Employee> getEmployees()
+	{
+		return dao.getEmployees();
+		
 	}
 
 

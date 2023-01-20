@@ -1,4 +1,5 @@
 package com.practise.controller;
+import java.util.List;
 import java.util.Scanner;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -19,7 +20,7 @@ public static void main(String[] args) {
 	Scanner scan= new Scanner(System.in);
 	int option=0;
 	 do {
-		 System.out.println("Enter Option 1=Store 2=Fetch 3=Exit");
+		 System.out.println("Enter Option 1=Store 2=Fetch 3=FetchAll 4=Exit");
 			option=scan.nextInt();
 		if(option==1)
 			{
@@ -57,13 +58,28 @@ public static void main(String[] args) {
 						",Salary= "+e.getSalary()
 						);
 		}
+	else if (option == 3)
+	{
+		List<Employee> employees =service.getEmployees();
+		for (Employee e : employees) {
+		System.out.println
+		(
+		"Id = "+e.getId()+
+		",Name = "+e.getName()+
+		",Salary= "+e.getSalary()
+		);}
+	}
+		else if (option == 4 ) 
+		{
+			break;
+		}
 	else 
 		
 		System.out.println("Invalid Input");
 		continue;
 		
 	}
-	 while (option!=1);
+	 while (option!=-1);
 	 scan.close();
 	 ctax.close();
 	 return;

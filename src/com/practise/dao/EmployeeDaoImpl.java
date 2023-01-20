@@ -1,9 +1,6 @@
 package com.practise.dao;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.util.List;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-
 import com.practise.beans.Employee;
 
 // we need to implement these methods
@@ -20,19 +17,6 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	public Employee getEmployee(int id) {
 		Employee emp= null;
 		String query = "select * from employee where id =?";
-		class RowImpl implements RowMapper<Employee>
-		{
-			@Override
-			public Employee mapRow(ResultSet rs, int rowNum) throws SQLException
-					{
-						Employee e = new Employee();
-						e.setId(rs.getInt("id"));
-						e.setName(rs.getString("name"));
-						e.setSalary(rs.getDouble("salary"));
-						return e;
-					}
-			
-		}
 		emp=template.queryForObject(query,new RowImpl(),id);
 		return emp;
 	}
@@ -43,5 +27,18 @@ public class EmployeeDaoImpl implements EmployeeDao {
 				employee.getId(),employee.getName(),employee.getSalary());
 				return status; //status stores number of rows affected value
 	}
+
+
+	@Override
+	public List<Employee> getEmployees() {
+		String queString= "select * from employee";
+		return template.query(queString, new RowImpl());
+	}
+
+
+
+
+
+	
 
 }
