@@ -12,9 +12,9 @@ public static void main(String[] args) {
 	
 	EmployeeService service=(EmployeeService)ctx.getBean("employeeService");
 	
-//	// service needs to have methods
-//	ClassPathXmlApplicationContext ctax = (ClassPathXmlApplicationContext)ctx;
-//	ctax.close();
+	// service needs to have methods
+	ClassPathXmlApplicationContext ctax = (ClassPathXmlApplicationContext)ctx;
+	ctax.close();
 	
 }
 }

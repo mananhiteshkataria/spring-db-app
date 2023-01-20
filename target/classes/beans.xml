@@ -18,10 +18,10 @@
 		<property name="dataSource" ref="springDataSource"></property>
 	</bean>
 	<bean id="employeeDao" class="com.practise.dao.EmployeeDaoImpl">
-	<property name="template" ref="jdbcTemplate"></property>
+		<property name="template" ref="jdbcTemplate"></property>
 	</bean>
 	<bean id="employeeService" class="com.practise.service.EmployeeService">
-	<property name="dao" ref="employeeDao"></property>
+		<property name="dao" ref="employeeDao"></property>
 	</bean>
 	
 </beans>
