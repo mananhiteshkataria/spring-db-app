@@ -1,4 +1,4 @@
-# Actual connectivity as shown in <a href="https://github.com/mananhiteshkataria/Spring-App">Spring-App</a> #
+# Actual connectivity over here if you reffered from <a href="https://github.com/mananhiteshkataria/Spring-App">Spring-App</a> #
 ## Dependency Injection between the objects with simple and complex types ##
 ### You can have setter methods to supply the dependencies of simple or complex type ###
 
