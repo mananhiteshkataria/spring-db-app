@@ -1,9 +1,10 @@
 package com.practise.dao;
-
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
 import com.practise.beans.Employee;
-import com.practise.service.EmployeeService;
 
 // we need to implement these methods
 public class EmployeeDaoImpl implements EmployeeDao {
@@ -17,8 +18,23 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	@Override
 	public Employee getEmployee(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Employee emp= null;
+		String query = "select * from employee where id =?";
+		class RowImpl implements RowMapper<Employee>
+		{
+			@Override
+			public Employee mapRow(ResultSet rs, int rowNum) throws SQLException
+					{
+						Employee e = new Employee();
+						e.setId(rs.getInt("id"));
+						e.setName(rs.getString("name"));
+						e.setSalary(rs.getDouble("salary"));
+						return e;
+					}
+			
+		}
+		emp=template.queryForObject(query,new RowImpl(),id);
+		return emp;
 	}
 
 	@Override

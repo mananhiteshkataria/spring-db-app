@@ -16,6 +16,13 @@ public class EmployeeService {
 	{
 		return dao.save(employee);
 	}
+	
+	// create method that calls employee of dao
+	
+	public Employee getEmployee (int id)
+	{
+		return dao.getEmployee(id);
+	}
 
 
 	
