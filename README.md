@@ -54,7 +54,9 @@ It has a property called datasource which is referencing DriverManagerDataSource
 ## JDBC Template ##
 
 - update(sqlQuery,args)
-- queryForObject(sqlQuery,rowMapperObject)
+- queryForObject(sqlQuery,rowMapperObject,Object)
+	### Example ###
+	sqlQuery="select * from employee where id = ?"
 - query(sqlQuery,rowMapperObject)
 - update : It is used to run insert , update & delete types of query
 - queryForObject : It is used to run select query that can return one result, mainly used when you wan an object with a particulae id
