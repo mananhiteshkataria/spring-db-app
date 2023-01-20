@@ -54,10 +54,9 @@ It has a property called datasource which is referencing DriverManagerDataSource
 ## JDBC Template ##
 
 - update(sqlQuery,args)
-- queryForObject(sqlQuery,rowMapperObject,Object)
-	### Example ###
-	sqlQuery="select * from employee where id = ?"
+- queryForObject(sqlQuery,rowMapperObject,Object),**Example :- sqlQuery="select * from employee where id = ?"**				
 - query(sqlQuery,rowMapperObject)
 - update : It is used to run insert , update & delete types of query
 - queryForObject : It is used to run select query that can return one result, mainly used when you wan an object with a particulae id
 - query : It is also used to run select quey but it returns multiple records , mainly used when you want multiple objects for a query.
+- rowMapperObject : It is a class that implements RowMapper interface that takes care of converting sql records to java object , it has one method map(int 		rowNum,ResultSet rs) When select query is triggered a one or more rows will be returned which is handled by ResultSet & rowNum gives index number for each 	   ResultSet, on each map() invocation we can expect one java object.
