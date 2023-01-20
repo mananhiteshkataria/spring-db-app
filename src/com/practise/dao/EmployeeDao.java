@@ -1,6 +1,7 @@
 package com.practise.dao;
 
 import com.practise.beans.Employee;
+import com.practise.service.EmployeeService;
 
 public interface EmployeeDao {
 // crud
