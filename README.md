@@ -174,4 +174,21 @@ Http Methods
 
 Every Operation you must perform must have an URL which is used by another application to communicate.
 
+## Creating Rest Web Services using SpringBoot ##
 
+We need to use spring boot starter web library to create ReST web services because it gives you all the configurations required for web applications & ReST web services like
+
+- Server Configuration
+- Component scanning - @Component , @Service , @RestController and etc
+- Dependency Injection using annotations like @AutoWired
+- application.properties - for some configurations
+## Spring Initializer: ##
+  It is a website by spring that helps you quickly get a spring boot project template
+
+## Change Port Of Server ##
+
+You must use application.properties in resources
+
+``` application.properties
+server.port=9090
+```
