@@ -1,7 +1,7 @@
-# Actual connectivity over here if you reffered from <a href="https://github.com/mananhiteshkataria/Spring-App">Spring-App</a> #
+# Actual connectivity over here if you referred from [Spring-App](https://github.com/mananhiteshkataria/Spring-App") #
 ## Dependency Injection between the objects with simple and complex types ##
 ### You can have setter methods to supply the dependencies of simple or complex type ###
-
+``` java
 	Class MySQLDBImpl implements DBOperations
 	{
 		private String dbUrl;//simple type
@@ -19,6 +19,7 @@
 	<bean id="b2" class="com.practise.UserService">
 		<property name="dbop" ref="b1" />
 	</bean>
+```
 ## Spring JDBC ##
 
 -	It helps you to interact with any Relational Database 	systems like Oracle,Mysql,Derby,Sybase and so on
@@ -120,7 +121,7 @@ Some of the starter libraries:
 
 It uses @SpringBootApplication annotation which takes care of auto configuring the application based on the library you have in project , a class must have @SpringBootApplication and this class must be loaded to trigger the automation
 
-
+``` java
 	@SpringBootAutomation
 	public class AppStarter
 	{
@@ -130,9 +131,32 @@ It uses @SpringBootApplication annotation which takes care of auto configuring t
 		}
 		
 	}
+```
 
 The moment **AppStarter** is loaded it looks for all the libraries in the project & also **application.properties** to perform the configuration required.
 
 Note : By default all the classes are scanned by looking the sub-package of the class @SpringBootApplication , hence you must have all the classes in the sub-package of the class having @SpringBootApplication.
+
+@Autowired : It is used to supply dependency to an object
+
+@Component , @Service,@RestController,@Repository : These annotations are written on top of the class which lets spring to create the object and maintain in the spring container
+``` java
+			@Component
+			class A{}
+			@Component
+			class B
+			{
+				@AutoWired
+				private A obj;
+			}
+			@Service
+			class C
+			{
+				@AutoWired
+				private B objB;
+				//object of B is injected to C object
+			}
+```
+All the objects like A,B & C are created in spring container.
 
 
