@@ -137,7 +137,7 @@ The moment **AppStarter** is loaded it looks for all the libraries in the projec
 
 Note : By default all the classes are scanned by looking the sub-package of the class @SpringBootApplication , hence you must have all the classes in the sub-package of the class having @SpringBootApplication.
 
-@Autowired : It is used to supply dependency to an object
+@AutoWired : It is used to supply dependency to an object
 
 @Component , @Service,@RestController,@Repository : These annotations are written on top of the class which lets spring to create the object and maintain in the spring container
 ``` java
