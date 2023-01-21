@@ -34,9 +34,6 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		String queString= "select * from employee";
 		return template.query(queString, new RowImpl());
 	}
-	
-	
-
 
 
 

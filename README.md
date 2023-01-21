@@ -159,4 +159,17 @@ Note : By default all the classes are scanned by looking the sub-package of the 
 ```
 All the objects like A,B & C are created in spring container.
 
+## RESTfull Web Services ##
 
+ReST stands for Representational State Transfer which is used to make heterogeneous applications to exchange the data regardless of the technology they are using, ReST webservices uses Http methods to specify the operations each Http methods must have some URL's which is used by the applications who wants to communincate.
+
+Http Methods
+
+1. HTTP Post: To perform store/create operation
+1. HTTP Get: To perform retrieve/fetch operation
+1. HTTP Put: To perform update/modify operation
+1. HTTP Delete: To perform remove/delete operation
+   
+## URL ##
+
+Every Operation you must perform must have an URL which is used by another application to communicate.
