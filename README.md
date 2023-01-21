@@ -1,5 +1,5 @@
-# Actual connectivity over here if you referred from [Spring-App](https://github.com/mananhiteshkataria/Spring-App") #
-## Dependency Injection between the objects with simple and complex types ##
+# Actual connectivity over here if you referred from [Spring-App](https://github.com/mananhiteshkataria/Spring-App") 
+## Dependency Injection between the objects with simple and complex types
 ### You can have setter methods to supply the dependencies of simple or complex type ###
 ``` java
 	Class MySQLDBImpl implements DBOperations
